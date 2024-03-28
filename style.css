@@ -25,6 +25,29 @@ body{
     margin: 0;
 }
 
+body .sound{
+    object-fit: cover;
+    position: fixed;
+    border-radius:100%;
+    height: 40px;
+    width: 40px;
+    right: 40px;
+    bottom: 40px;
+    border: none;
+    z-index: 1;
+    background-color: #EFEBE5;
+    box-shadow: 0px 0px 48px 15px rgba(115,57,57,0.57);
+    -webkit-box-shadow: 0px 0px 48px 15px rgba(115,57,57,0.57);
+    -moz-box-shadow: 0px 0px 48px 15px rgba(115,57,57,0.57);
+}
+
+body .sound img{
+    position: relative;
+    top: 1px;
+    left: -1px;
+    height: 30px;
+}
+
 .continer{
     display:flex;
     flex-direction: column;
@@ -36,6 +59,7 @@ body{
 .clas1{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-color: #622A2A;
     width: 100%;
@@ -56,6 +80,8 @@ body{
     opacity: .04;
     background-image: url('./img/cover1.svg');
 }
+
+
 
 .clas1 .topandDown{
     
@@ -88,6 +114,21 @@ body{
     font-size: 5vh;
     font-family: 'catymarger','sans-serif';
     letter-spacing: 5px;
+}
+
+.clas1 .bawah{
+    position: absolute;
+    bottom: 100px;
+}
+
+.clas1 .bawah small{
+    font-family: "Poppins", sans-serif;
+}
+
+.clas1 .bawah .tujuan{
+    font-family: 'catymarger','sans-serif';
+    font-size: 5vh;
+    letter-spacing: 2px;
 }
 
 .clas2 {
@@ -147,8 +188,8 @@ body{
     position: relative;
     right: 10vh;
     grid-area:  left;
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     object-fit: cover;
     border-radius: 100%;
 }
@@ -165,6 +206,10 @@ body{
     text-align: center;
 }
 
+.clas2 div .footer h2{
+    position: relative;
+    top: 12px;
+}
 .clas2 div .footer img{
     
     height: 90px;
@@ -185,7 +230,8 @@ body{
 
 .clas3 .galery {
     margin: 10px 10px;
-    max-width: 80%;
+    width: 80%;
+    max-width: 280px;
 }
 
 
@@ -203,6 +249,7 @@ body{
     border-style: solid;
     isolation: isolate;
     position: relative;
+    padding-bottom: 30px;
 }
 
 .clas3 .galery .area .top{
@@ -226,6 +273,10 @@ body{
     background-attachment: local;
 }
 
+.clas4 .condition {
+    padding: 0 20px;
+}
+
 .clas4 .condition h5{
     font-family: 'catymarger', sans-serif;
     letter-spacing: 5px;
@@ -233,6 +284,8 @@ body{
 }
 
 .clas4 .condition ul li {
+    margin: 15px 0;
+    list-style-type: disc;
     font-family: 'cocoGotic-trial', sans-serif;
 }
 
@@ -278,6 +331,20 @@ body{
     position: relative;
     overflow: hidden;
     cursor: pointer;
+}
+
+
+
+.clas4 form div #chek{
+    margin: 10px 0;
+    height: 40px;
+    width: 40px;
+}
+
+.clas4 form div span {
+    position: relative;
+    top: -16px;
+    left: 20px;
 }
 
 .clas4 form .check-box{
@@ -358,12 +425,14 @@ body{
 .clas5 .continergalery .galery2{
     margin: 13px;
     max-width: 200px;
+    
 }
 
 .clas5 .continergalery .galery2 img{
     object-fit: cover;
     border-radius: 5px;
     height: 300px;
+    max-width: 200px;
 }
 
 .clas5 .continergalery .galery2 .textbox{
@@ -371,7 +440,8 @@ body{
     border-radius: 5px;
     font-family: "DM Sans", sans-serif;
     font-style: italic;
-    
+    font-size: small;
+    padding: 10px;
 }
 
 .clas6{
@@ -411,6 +481,7 @@ body{
     display: flex;
     padding: 200px 0;
     justify-content: center;
+    text-align: center;
 }
 
 .clas7 .left {
@@ -422,7 +493,7 @@ body{
     font-family: 'catyMarger', sans-serif;
     font-weight: bold;
     font-size: 35px;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
 }
 
 .clas7 .left p{
@@ -452,7 +523,7 @@ body{
 .clas8 {
     width: 100%;
     height: 900px;
-    background-image: url('./img/DSCF0893.JPG');
+    background-image: url('./img/turut\ mengundang.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -461,6 +532,9 @@ body{
     text-align: center;
     position: relative;
     isolation: isolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -472,11 +546,13 @@ body{
 
 .clas8 ul{
     list-style-type: none;
+    position: relative;
+    left: -10px;
 }
 
 .clas8 ul li {
     font-family: "Poppins", sans-serif;
-    font-weight: bold;
+    font-weight: medium;
     letter-spacing: 2px;
     font-size: 16.5px;
 }
@@ -510,12 +586,11 @@ body{
 
 .clas9 .textbox {
     font-family: '';
-    text-align: center;
     margin: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     border-style: solid;
     padding: 20px; 
     border-radius: 9px;
@@ -544,17 +619,23 @@ body{
 }
 
 .clas9 button{
-    height: 60px;
+    height: 200px;
     width: 30%;
     border: none;
     border-radius: 6px;
     background-color: #fff;
-    transition: 2s;
+    transition: 1s;
 }
 
 .clas9 button:hover{
     width: 15%;
     background-color: #797979;
+    
+}
+
+.clas9 button:focus{
+    background-color: #252525;
+    color: #fff;
 }
 
 
@@ -583,6 +664,10 @@ body{
         justify-content: center;
         align-items: center;
     }
+
+    .clas4 .condition{
+        margin-bottom: 40px;
+    }
     .clas5 .continergalery{
         
         flex-direction: column;
@@ -591,7 +676,7 @@ body{
     }
     .clas6{
         grid-template-columns: 
-        auto;
+        auto auto;
     }
     .clas7{
         flex-direction: column;

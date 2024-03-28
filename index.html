@@ -8,6 +8,12 @@
     <title>INVITATION</title>
   </head>
   <body>
+
+    <audio id="myAudio" src="./sound/main_song.mp3" allow="autoplay">
+    </audio>
+    <button class="sound" >
+      <img src="./img/volumeon.png" alt="" id="sound">
+    </button>
     <div class="continer">
       <div class="clas1">
         <img class="topandDown" src="./img/top.png" alt="" />
@@ -16,25 +22,30 @@
           <strong>FRANCIS AWARD</strong><br />
           <strong>2024</strong>
         </div>
+        <div class="bawah">
+          <small>Kepada Yth:</small>
+          <div class="tujuan">Orang Tua / Wali Kelas XII</div>
+        </div>
         <img class="topandDown1" src="./img/top.png" alt="" />
       </div>
       <div class="clas2">
         <div class="gradient"></div>
         <div>
-          <article data-aos="zoom-out-right" data-aos-duration="3000">
+          <article data-aos="fade-up" data-aos-duration="3000">
             <h3>What is Francis Award?</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-              reprehenderit officia nihil soluta quae nam tempora veritatis sint
-              neque non, odit placeat eveniet, laudantium nostrum sit similique
-              impedit? Pariatur, earum?
+              Merupakan kegiatan tahunan SMA Fransiskus Bandar Lampung yang
+              diadakan dalam ujud pelepasan dan perpisahan kelas XII. Selain itu
+              juga, Francis Award merupakan ajang apresiasi siswa-siswi kelas
+              XII yang berhasil meraih prestasi selama menempuh pendidikan di
+              SMA Fransiskus.
             </p>
           </article>
           <img
-            src="./img/clas2img1.JPG"
+            src="./img/foto bersama.jpg"
             alt="foto"
             id="kakel"
-            data-aos="zoom-out-left"
+            data-aos="fade-up"
             data-aos-duration="3000"
           />
           <div class="footer">
@@ -46,13 +57,13 @@
       </div>
       <div class="clas3">
         <div class="galery" data-aos="fade-left" data-aos-duration="2000">
-          <img src="/img/galery1,2.JPG" alt="galery1" />
+          <img src="./img/aula.jpg" alt="galery1" />
 
           <div class="area">
             <img src="./img/top.svg" alt="" class="top" />
             <h6>Tempat</h6>
             <b>AUDITORIUM</b><br />
-            <small>SMA FRANSISKUS BANDAR LAMPUNG</small>
+            <small>SMA Fransiskus Bandar Lampung</small>
           </div>
         </div>
         <div class="galery" data-aos="fade-right" data-aos-duration="2000">
@@ -60,46 +71,54 @@
 
           <div class="area">
             <img src="./img/top.svg" alt="" class="top" />
-            <h6>Tempat</h6>
-            <b>AUDITORIUM</b><br />
-            <small>SMA FRANSISKUS BANDAR LAMPUNG</small>
+            <h6>Hari & tanggal</h6>
+            <b>Jumat</b><br />
+            <small>26 April 2024</small>
           </div>
         </div>
-        <div class="galery" data-aos="fade-right" data-aos-duration="2000">
-          <img src="/img/galery1,3.JPG" alt="galery1" />
+        <div class="galery" data-aos="fade-left" data-aos-duration="2000">
+          <img src="./img/pak didik.jpg" alt="galery1" />
 
           <div class="area">
             <img src="./img/top.svg" alt="" class="top" />
-            <h6>Tempat</h6>
-            <b>AUDITORIUM</b><br />
-            <small>SMA FRANSISKUS BANDAR LAMPUNG</small>
+            <h6>Pukul</h6>
+            <b>14.30</b><br />
+            <small>s.d. selesai</small>
           </div>
         </div>
       </div>
       <div class="clas4">
-        <div class="condition">
-          <h5>Therm & Condition</h5>
+        <div class="condition" data-aos="fade-right" data-aos-duration="3000">
+          <h5>Syarat & Ketentuan</h5>
 
           <ul>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Lorem, ipsum dolor.</li>
+            <li>
+              Setiap siswa diperkenankan membawa orang tua / wali murid untuk
+              menghadiri Francis Award.
+            </li>
+            <li>
+              Setiap perwakilan orang tua / wali murid wajib mengisi link
+              kehadiran minimal satu minggu sebelum kegiatan dilaksanakan
+            </li>
+            <li>Hanya diperkenankan membawa satu orang tua / wali murid</li>
           </ul>
         </div>
 
         <form
           onsubmit="return false"
-          data-aos="flip-up"
+          data-aos="fade-left"
           data-aos-duration="1000"
         >
           <h4>DATA HADIR</h4>
-          <p>Masukan nama anda</p>
-          <input type="text" placeholder="your name" class="isi" />
-          <p>Masukan nama anak anda</p>
-          <input type="text" placeholder="your name" class="isi" />
+          <p>Nama Orang tua / Wali Murid</p>
+          <input type="text" placeholder="Nama Anda" class="isi" id="ortu" />
+          <p>Nama Anak / Siswa</p>
+          <input type="text" placeholder="Nama Siswa" class="isi" id="anak" />
+          <p>Masukkan Kelas Anak Anda</p>
+          <input type="text" placeholder="Kelas" class="isi" id="kelas" />
           <div>
-            <input type="checkbox" name="" id="" />
-            <span>apakah anda dapat hadir</span>
+            <input type="checkbox" name="" id="chek" />
+            <span>Apakah Anda Dapat Hadir?</span>
           </div>
           <br />
           <button id="btn" class="btns">
@@ -113,82 +132,79 @@
         </form>
       </div>
       <div class="clas5">
-        <h2>Francis Award Theme</h2>
-        <h3>“Nyangking Kendak Berejo Besamo”</h3>
+        <h2 data-aos="fade-up" data-aos-duration="2000">Francis Award Theme</h2>
+        <h3 data-aos="fade-up" data-aos-duration="2000">
+          “Nyangking Kendak Berejo Besamo”
+        </h3>
         <div class="continergalery">
-          <div
-            class="galery2"
-            data-aos="fade-up-right"
-            data-aos-duration="2000"
-          >
-            <img src="./img/galery1,2.JPG" alt="galery2" />
+          <div class="galery2" data-aos="fade-up" data-aos-duration="2000">
+            <img src="./img/Ampera.jpg" alt="galery2" />
             <br />
             <div class="textbox">
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
-                voluptas?
+                Pada tahun ini, Francis Award akan bernuansa adat Sumatera
+                Selatan.
               </p>
             </div>
           </div>
-          <div class="galery2" data-aos="fade-up-left" data-aos-duration="2000">
-            <img src="./img/galery1,2.JPG" alt="galery2" />
+          <div class="galery2" data-aos="fade-up" data-aos-duration="2000">
+            <img src="./img/Songket.svg" alt="galery2" />
             <br />
             <div class="textbox">
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
-                voluptas?
+                Para tamu undangan dipersilahkan mengenakan aneka busana adat
+                Sumatera Selatan seperti kain Songket.
               </p>
             </div>
           </div>
-          <div
-            class="galery2"
-            data-aos="fade-up-right"
-            data-aos-duration="2000"
-          >
-            <img src="./img/galery1,2.JPG" alt="galery2" />
+          <div class="galery2" data-aos="fade-up" data-aos-duration="2000">
+            <img src="./img/ratra.jpg" alt="galery2" />
             <br />
             <div class="textbox">
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos,
-                voluptas?
+                Tema diatas bermakna cita-cita yang diraih untuk masa depan.
+                Meraih bersama-sama, berjuang dengan solidaritas selama proses
+                belajar di SMA Fransiskus.
               </p>
             </div>
           </div>
         </div>
+        <br>
+        <br>
       </div>
       <div class="clas6">
         <img
-          src="/img/galery1,2.JPG"
+          src="./img/kak helena.jpg"
           alt="galery3"
           data-aos="fade-up"
           data-aos-duration="1000"
         />
         <img
-          src="/img/galery1,2.JPG"
+          src="./img/kak heski.jpg"
           alt="galery3"
           data-aos="fade-up"
           data-aos-duration="1000"
         />
         <img
-          src="/img/galery1,2.JPG"
+          src="./img/kak batak.jpg"
           alt="galery3"
           data-aos="fade-up"
           data-aos-duration="1000"
         />
         <img
-          src="/img/galery1,2.JPG"
+          src="./img/bu ike.jpg"
           alt="galery3"
           data-aos="fade-up"
           data-aos-duration="1000"
         />
         <img
-          src="/img/galery1,2.JPG"
+          src="./img/savero.svg"
           alt="galery3"
           data-aos="fade-up"
           data-aos-duration="1000"
         />
         <img
-          src="/img/galery1,2.JPG"
+          src="./img/pakwan.png"
           alt="galery3"
           data-aos="fade-up"
           data-aos-duration="1000"
@@ -196,57 +212,84 @@
       </div>
       <div class="clas7">
         <div class="left">
-          <h3>Francis Awawrd gift</h3>
-          <p>
+          <h3 data-aos="fade-zoom" data-aos-duration="3000">
+            Francis Award Gift
+          </h3>
+          <p data-aos="fade-up" data-aos-duration="2000">
             Bagi Bapak/Ibu yang ingin mengirimkan hadiah untuk menunjang
             kegiatan Francis Award 2024, dapat melalui virtual account atau
             e-Wallet di samping ini:
           </p>
         </div>
-        <div class="gift" data-aos="flip-up" data-aos-duration="2000">
+        <br />
+        <br />
+        <div class="gift" data-aos="flip-up" data-aos-duration="1000">
           <img src="./img/Logo-BNI-removebg-preview.png" alt="BNI" />
-          <p>**** **** **** ****</p>
+          <p>1334 961 978</p>
           <p>A.N. Yayasan Dwi Bakti Bandar Lampung</p>
-          <button>copy link</button>
+          <button onclick="copy(1334961978)">Copy Link</button>
         </div>
       </div>
       <div class="clas8">
-        <h2>Turut Mengundang:</h2>
-        <ul>
-          <li>Kepala SD Fransiskus 1 & 2 Bandar Lampung</li>
-          <li>vallen</li>
-        </ul>
+        <div>
+          <h2 data-aos="fade-up" data-aos-duration="2000">Turut Mengundang:</h2>
+          <ul data-aos="fade-up" data-aos-duration="2000">
+            <li>Ketua Yayasan Dwi Bakti</li>
+            <li>Kepala SMP Fransiskus Tanjungkarang</li>
+            <li>Kepala SD Fransiskus 1 & 2 Bandar Lampung</li>
+            <li>Ketua RT 04, 05, dan Ketua RW</li>
+            <li>BABINKAMTIBMAS dan BABINSA</li>
+            <li>Dinas Pendidikan Kota Bandar Lampung</li>
+            <li>Komite Sekolah</li>
+            <li>Alumni</li>
+          </ul>
+        </div>
       </div>
       <div class="clas9">
-        <h1>THANK YOU</h1>
+        <h1 data-aos="fade-zoom" data-aos-duration="4000">THANK YOU</h1>
+
         <br />
-        <div class="textbox">
+        <div class="textbox" data-aos="fade-up" data-aos-duration="3000">
           <b>OSIS SMA FRANSISKUS BANDAR LAMPUNG</b>
           <ul>
             <li>
               <img src="./img/instagram.png" alt="ig" /><span
-                ><a href="">vallen</a></span
+                ><a href="https://www.instagram.com/osisfransiba/?hl=en#"
+                  >@osisfransiba</a
+                ></span
               >
             </li>
             <li>
               <img src="./img/youtube.png" alt="yt" /><span
-                ><a href="">vallen</a></span
+                ><a href="https://www.youtube.com/@smafransiskusbdl4543"
+                  >sma_fransikus_bdl</a
+                ></span
               >
             </li>
             <li>
               <img src="./img/tik-tok.png" alt="tt" /><span
-                ><a href="">vallen</a></span
+                ><a href="https://www.tiktok.com/@osisfransiba"
+                  >osisfransiba</a
+                ></span
               >
             </li>
             <li>
               <img src="./img/instagram.png" alt="ig" /><span
-                ><a href="">vallen</a></span
+                ><a href="https://www.instagram.com/sma_fransiskus_bdl/?hl=en#"
+                  >@sma_fransiskus_bdl</a
+                ></span
               >
             </li>
           </ul>
         </div>
         <br />
-        <button>Save Date</button>
+        <br />
+        <button
+          onclick="alert(`terimakasih telah menambahkan penanggalan setelah ini anda akan langsung dipindahkan ke website selanjutnya untuk menyimpan penanggalan`) ;window.open(`https://calendar.google.com/calendar/u/0?cid=N2Y1NWVjZjI4OGU3NzdjZTEzMzllNGY5MWM4Mjk0YTQ1OTc4YWNjMmVmYTU5MGE5ZWI3NmY4YTExYmViYjJmY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t`)"
+        >
+          Save Date
+        </button>
+        <br />
       </div>
     </div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -254,34 +297,91 @@
       AOS.init();
     </script>
     <script type="text/javascript">
-      const btn = document.querySelector("#btn");
-      const btnText = document.querySelector("#btnText");
-
-      btn.onclick = () => {
-        btnText.innerHTML = "Thanks";
-        btn.classList.add("active");
-      };
+      btn.onclick = () => {};
     </script>
     <script>
+      let music = true;
+      let myAudio = document.getElementById("myAudio");
+      function replace_space(text) {
+        text.replace(/\s+/g, " ");
+        let a = text.split(" ");
+        return a.join("+");
+      }
 
-      document.getElementById("btn").addEventListener("click", async ()=>{
-        alert("data telah dikirimkan terimakasih banyak")
+      window.addEventListener("DOMContentLoaded", e =>{
+        myAudio.volume = 0.2
+        myAudio.play()
+      })
+
+      function textbox_translate(textbox) {
+        if (textbox == "on") return "dapat";
+        if (textbox == "off") return "tidak";
+      }
+
+      document.getElementById("btn").addEventListener("click", async () => {
+        let namaOrtu = document.getElementById("ortu").value;
+        let namaAnak = document.getElementById("anak").value;
+        let kelas = document.getElementById("kelas").value;
+        let number = 0;
+        let textbox = document.getElementById("chek").value;
+        const btn = document.querySelector("#btn");
+        const btnText = document.querySelector("#btnText");
+
+        if (!namaOrtu || !namaAnak || !kelas)
+          return alert("tolong masukan semua data");
+
+        namaOrtu = replace_space(namaOrtu);
+        namaAnak = replace_space(namaAnak);
+        kelas = replace_space(kelas);
+
+        const url = `https://docs.google.com/forms/d/e/1FAIpQLSd_Jla_Y43TWiKd5wEhwBfuiPNGqgYDrpi5p8uxMDQ2f4oDtA/formResponse?usp=pp_url&entry.857923997=${namaOrtu}&entry.1656989487=${namaAnak}&entry.1724579065=${kelas}&entry.1782957207=${number}&entry.1169111626=${textbox_translate(
+          textbox
+        )}`;
+        console.table({
+          namaOrtu,
+          namaAnak,
+          kelas,
+          number,
+          textbox,
+          url,
+        });
+
+        btnText.innerHTML = "Thanks";
+        await btn.classList.add("active");
+
         try {
           var requestOptions = {
             method: "GET",
             redirect: "follow",
           };
 
-          fetch(
-            "https://docs.google.com/forms/d/e/1FAIpQLSd_Jla_Y43TWiKd5wEhwBfuiPNGqgYDrpi5p8uxMDQ2f4oDtA/formResponse?usp=pp_url&entry.857923997=len&entry.1656989487=bon&entry.1169111626=tidak",
-            requestOptions
-          )
+          fetch(url, requestOptions)
             .then((response) => response.text())
             .then((result) => console.log(result))
             .catch((error) => console.log("error", error));
+
+          alert("data telah dikirimkan terimakasih banyak ");
         } catch (err) {
           alert("EROR SORRY YOU CAN CALL AUTHOR");
         }
+      });
+
+      function copy(value) {
+        navigator.clipboard.writeText(value);
+      }
+
+      
+      let sound = document.getElementById("sound")
+      sound.addEventListener("click", ()=>{
+        console.log("a")
+        if(music){
+          sound.src = './img/volumeof.png'
+          myAudio.pause()
+        }else{
+          sound.src = './img/volumeon.png'
+          myAudio.play()
+        }
+        music = !music
       })
     </script>
   </body>
