@@ -48,6 +48,15 @@ body .sound img{
     height: 30px;
 }
 
+body .open{
+
+    background-color: #622A2A;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
 .continer{
     display:flex;
     flex-direction: column;
@@ -212,7 +221,7 @@ body .sound img{
 }
 .clas2 div .footer img{
     
-    height: 90px;
+    height: 15vh;
     position: relative;
     bottom: -20px;
 }
