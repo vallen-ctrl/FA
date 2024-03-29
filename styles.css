@@ -137,7 +137,7 @@ body .sound img{
     width: 100%;
     position: relative;
     isolation: isolate;  
-    
+    background-image: url('./img/aulasemua.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; 
