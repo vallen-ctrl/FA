@@ -658,6 +658,10 @@ body .open{
 
 
 @media (max-width: 800px){
+    html{
+        overflow-x: hidden;
+        width: 100%;
+    }
     .clas2 div{
         justify-content: center;
         grid-template-areas: 
