@@ -9,7 +9,7 @@
   </head>
   <body>
 
-    <audio id="myAudio" src="./sound/main_song.mp3" allow="autoplay">
+    <audio id="myAudio" src="./sound/main_song.mp3" muted="muted" type="audio/mpeg">
     </audio>
     <button class="sound" >
       <img src="./img/volumeon.png" alt="" id="sound">
@@ -67,7 +67,7 @@
           </div>
         </div>
         <div class="galery" data-aos="fade-right" data-aos-duration="2000">
-          <img src="/img/clas2img1.JPG" alt="galery1" />
+          <img src="/img/aulasemua.jpg" alt="galery1" />
 
           <div class="area">
             <img src="./img/top.svg" alt="" class="top" />
@@ -301,8 +301,12 @@
       btn.onclick = () => {};
     </script>
     <script>
-      let music = true;
+      let music = false;
       let myAudio = document.getElementById("myAudio");
+      let sound = document.getElementById("sound")
+
+      myAudio.volume = 0.2;
+      
       function replace_space(text) {
         text.replace(/\s+/g, " ");
         let a = text.split(" ");
@@ -310,7 +314,7 @@
       }
 
       window.addEventListener("DOMContentLoaded", e =>{
-        myAudio.volume = 0.2
+        myAudio.muted = false;
         myAudio.play()
       })
 
@@ -372,8 +376,10 @@
       }
 
       
-      let sound = document.getElementById("sound")
+      
       sound.addEventListener("click", ()=>{
+        
+        myAudio.muted = false;
         console.log("a")
         if(music){
           sound.src = './img/volumeof.png'
@@ -382,6 +388,7 @@
           sound.src = './img/volumeon.png'
           myAudio.play()
         }
+        console.log(music)
         music = !music
       })
     </script>

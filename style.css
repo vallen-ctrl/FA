@@ -137,7 +137,7 @@ body .sound img{
     width: 100%;
     position: relative;
     isolation: isolate;  
-    background-image: url('./img/clas2img1.JPG');
+    background-image: url('./img/aulasemua.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; 
@@ -243,6 +243,7 @@ body .sound img{
 }
 
 .clas3 .galery .area{
+    color: #623E2A;
     font-family: "DM Sans", sans-serif;
     padding: 10px 25px;
     border-color: #622A2A;
@@ -271,7 +272,10 @@ body .sound img{
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: local;
+    color: #623E2A;
 }
+
+
 
 .clas4 .condition {
     padding: 0 20px;
@@ -394,6 +398,7 @@ body .sound img{
 }
 
 .clas5 {
+    color: #623E2A;
     width: 100%;
     background-image: url('./img/bg.png');
     background-image: url('./img/bg.png');
@@ -407,12 +412,14 @@ body .sound img{
     letter-spacing: 5px;
     font-family: 'catymarger', sans-serif;
     font-size: 50px;
+    padding: 0 15px;
 }
 
 .clas5 h3 {
     position: relative;
     top: -40px;
     font-family: "Poppins", sans-serif;
+    padding: 0 15px;
 }
 
 .clas5 .continergalery {
@@ -445,6 +452,7 @@ body .sound img{
 }
 
 .clas6{
+    
     padding: 40px 0;
     display: grid;
     justify-content: center;
@@ -464,12 +472,13 @@ body .sound img{
 .clas6 img{
 
     object-fit: cover;
-    height: 200px;
-    width: 200px;
+    height: 20vh;
+    width: 20vh;
     border-radius: 12px;
 }
 
 .clas7{
+    color: #623E2A;
     width: 100%;
     height: auto;
     align-items: center;
@@ -480,13 +489,12 @@ body .sound img{
     background-attachment: local;
     display: flex;
     padding: 200px 0;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
 }
 
 .clas7 .left {
     width: 40%;
-    margin: 0 20px;
 }
 
 .clas7 .left h3{
@@ -580,7 +588,7 @@ body .sound img{
 .clas9 h1{
     text-align: center;
     font-family: 'catyMarger';
-    font-size: 99.4px;
+    font-size: 10vh;
     letter-spacing: 5px;
 }
 
@@ -682,6 +690,10 @@ body .sound img{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .clas7 .left{
+        width: 80%;
     }
     .clas8{
         flex-direction: column;
