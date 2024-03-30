@@ -1170,8 +1170,8 @@
       }
 
       function textbox_translate(textbox) {
-        if (textbox == "on") return "dapat";
-        if (textbox == "off") return "tidak";
+        if (textbox) return "dapat";
+        else return "tidak";
       }
 
       document.getElementById("btn").addEventListener("click", async () => {
@@ -1179,7 +1179,7 @@
         let namaAnak = document.getElementById("anak").value;
         let kelas = document.getElementById("kelas").value;
         let number = 0;
-        let textbox = document.getElementById("chek").value;
+        let textbox = document.getElementById("chek").checked;
         const btn = document.querySelector("#btn");
         const btnText = document.querySelector("#btnText");
 
