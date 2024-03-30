@@ -335,12 +335,22 @@ body .onload--hidden{
 .clas3 .galery .area{
     color: #623E2A;
     font-family: "DM Sans", sans-serif;
+    height: 140px;
     padding: 10px 25px;
     border-color: #622A2A;
     border-style: solid;
     isolation: isolate;
     position: relative;
     padding-bottom: 30px;
+    font-size: 20px;
+}
+
+.clas3 .galery .area h4{
+    font-size: 18px;
+}
+
+.clas3 .galery .area b{
+    font-size: 18px;
 }
 
 .clas3 .galery .area .top{
