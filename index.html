@@ -3,745 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@font-face{
-    font-family: "catymarger";
-    src: url('./font/Catchy\ Mager\ Regular.ttf');
-}
-
-@font-face {
-    font-family: "cocoGotic-light-trial";
-    src: url('./font/CocoGothic-Light_trial.ttf');
-}
-
-@font-face {
-    font-family: "cocoGotic-trial";
-    src: url('./font/CocoGothic_trial.ttf');
-}
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url("'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'");
-
-html{
-    overflow-x: hidden;
-    width: 100%;
-}
-body{
-    width: 100%;
-    overflow-x: hidden;
-    margin: 0;
-}
-
-body .sound{
-    object-fit: cover;
-    position: fixed;
-    border-radius:100%;
-    height: 40px;
-    width: 40px;
-    right: 4vh;
-    bottom: 3vh;
-    border: none;
-    z-index: 1;
-    background-color: #EFEBE5;
-    box-shadow: 0px 0px 48px 15px rgba(115,57,57,0.57);
-    -webkit-box-shadow: 0px 0px 48px 15px rgba(115,57,57,0.57);
-    -moz-box-shadow: 0px 0px 48px 15px rgba(115,57,57,0.57);
-}
-
-body .sound img{
-    position: relative;
-    top: 1px;
-    left: -1px;
-    height: 30px;
-}
-
-body .open{
-
-    background-color: #622A2A;
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    z-index: -1;
-}
-
-.continer{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.clas1{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: #622A2A;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    color: #fff;
-    position: relative;
-    isolation: isolate;
-}
-.clas1::after{
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    object-fit: cover;
-    background-size:1780px;
-    background-position: center;
-    opacity: .04;
-    background-image: url('./img/cover1.svg');
-}
-
-
-
-.clas1 .topandDown{
-    
-    height: 100px;
-    width: 99px;
-    object-fit: cover;
-    position: absolute;
-    top: -50px;
-
-}
-
-.clas1 .topandDown1{
-    z-index: 3;
-    height: 110px;
-    width: 109px;
-    object-fit: cover;
-    position: absolute;
-    bottom: -55px;
-    
-}
-
-.clas1 .center small{
-    font-size: xx-small;
-    letter-spacing: 0.6vh;
-    font-family: "Poppins", sans-serif;
-}
-
-.clas1 .center strong{
-    text-shadow: rgba(255,255,255,0.98) 0px 0px 21px;
-    font-size: 5vh;
-    font-family: 'catymarger','sans-serif';
-    letter-spacing: 5px;
-}
-
-.clas1 .bawah{
-    position: absolute;
-    bottom: 100px;
-}
-
-.clas1 .bawah small{
-    font-family: "Poppins", sans-serif;
-}
-
-.clas1 .bawah .tujuan{
-    font-family: 'catymarger','sans-serif';
-    font-size: 5vh;
-    letter-spacing: 2px;
-}
-
-.clas2 {
-    position: relative;
-    z-index: -1;
-    width: 100%;
-    position: relative;
-    isolation: isolate;  
-    background-image: url('./img/aulasemua.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    color: #fff;
-}
-
- 
-
-
-.clas2 .gradient{
-    position: relative;
-    height: 100px;
-    background: rgb(98,42,42);
-    background: linear-gradient(180deg, rgba(98,42,42,1) 0%, rgba(255,0,0,0) 100%);
-    
-}
-
-.clas2::after{
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background-color: #622A2A;
-    opacity: .64;
-}
-
-.clas2 div{
-
-    display: grid;
-    grid-template-areas: 
-    'right left'
-    'footer footer'
-    ;
-    gap: 0px;
-}
-
-.clas2 div > *{
-    justify-self: center;
-}
-
-.clas2 div article{
-    letter-spacing: 3px;
-    font-family: 'monsterat', sans-serif;
-    grid-area: right;
-    max-width: 60%;
-}
-.clas2 div #kakel {
-    position: relative;
-    right: 10vh;
-    grid-area:  left;
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-    border-radius: 100%;
-}
-
-.clas2 div .footer{
-    width: 100%;
-    background-color: #622A2A;
-    margin-top: 80px;
-    padding-bottom: 20px;
-    display: flex;
-    grid-area: footer;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-}
-
-.clas2 div .footer h2{
-    position: relative;
-    top: 12px;
-}
-.clas2 div .footer img{
-    
-    height: 15vh;
-    position: relative;
-    bottom: -20px;
-}
-
-.clas3{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background-color: #EFEBE5;
-    justify-content: center;
-    padding: 20px 0;
-}
-
-
-
-.clas3 .galery {
-    margin: 10px 10px;
-    width: 80%;
-    max-width: 280px;
-}
-
-
-.clas3 .galery img{
-    height: 150px;
-    width: 100%;
-    object-fit: cover;
-    flex-direction: row;
-}
-
-.clas3 .galery .area{
-    color: #623E2A;
-    font-family: "DM Sans", sans-serif;
-    padding: 10px 25px;
-    border-color: #622A2A;
-    border-style: solid;
-    isolation: isolate;
-    position: relative;
-    padding-bottom: 30px;
-}
-
-.clas3 .galery .area .top{
-   position: absolute;
-   height: 60px;
-   right: -1px;
-   top: -1px;
-   width: 110px;
-}
-
-.clas4{
-    width: 100%;
-    padding: 40px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-image: url('./img/bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: local;
-    color: #623E2A;
-}
-
-
-
-.clas4 .condition {
-    padding: 0 20px;
-}
-
-.clas4 .condition h5{
-    font-family: 'catymarger', sans-serif;
-    letter-spacing: 5px;
-    font-size: 30px;
-}
-
-.clas4 .condition ul li {
-    margin: 15px 0;
-    list-style-type: disc;
-    font-family: 'cocoGotic-trial', sans-serif;
-}
-
-.clas4 form{
-    background-color: #fff;
-    padding: 19px;
-    border-radius: 6px;
-    display: flex; 
-    flex-direction: column;
-}
-
-.clas4 form h4{
-    text-align: center;
-}
-
-.clas4 form .isi{
-    background-color: #EFEBE5;
-    border: none;
-    height: 30px;
-    padding-left:10px;
-    border-radius: 10px;
-    margin: 10px 0;
-}
-
-.clas4 form .submit{
-    border: none;
-    border-radius: 10px;
-    height: 40px;
-    background-color: rgb(180, 242, 180);
-}
-
-.clas4 form button{
-    width: 270px;
-    height: 80px;
-    border: none;
-    outline: none;
-    background: #2f2f2f;
-    color: #fff;
-    font-size: 22px;
-    border-radius: 40px;
-    text-align: center;
-    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-
-
-.clas4 form div #chek{
-    margin: 10px 0;
-    height: 40px;
-    width: 40px;
-}
-
-.clas4 form div span {
-    position: relative;
-    top: -16px;
-    left: 20px;
-}
-
-.clas4 form .check-box{
-    width: 80px;
-    height: 80px;
-    border-radius: 40px;
-    box-shadow: 0 0 12px -2px rgba(0,0,0,0.5);
-    position: absolute;
-    top: 0;
-    right: -40px;
-    opacity: 0;
-}
-
-.clas4 form .check-box svg{
-    width: 40px;
-    margin: 20px;
-}
-
-.clas4 form svg path{
-    stroke-width: 3;
-    stroke: #fff;
-    stroke-dasharray: 34;
-    stroke-dashoffset: 34;
-    stroke-linecap: round;
-}
-
-.clas4 form .active{
-    background: #622A2A;
-    transition: 1s;
-}
-
-.clas4 form .active .check-box{
-    right: 0;
-    opacity: 1;
-    transition: 1s;
-}
-
-.clas4 form .active p{
-    margin-right: 125px;
-    transition: 1s;
-}
-
-.clas4 form .active svg path{
-    stroke-dashoffset: 0;
-    transition: 1s;
-    transition-delay: 1s;
-}
-
-.clas5 {
-    color: #623E2A;
-    width: 100%;
-    background-image: url('./img/bg.png');
-    background-image: url('./img/bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: local;
-    text-align: center;
-}
-.clas5 h2 {
-    letter-spacing: 5px;
-    font-family: 'catymarger', sans-serif;
-    font-size: 50px;
-    padding: 0 15px;
-}
-
-.clas5 h3 {
-    position: relative;
-    top: -40px;
-    font-family: "Poppins", sans-serif;
-    padding: 0 15px;
-}
-
-.clas5 .continergalery {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-
-.clas5 .continergalery .galery2{
-    margin: 13px;
-    max-width: 200px;
-    
-}
-
-.clas5 .continergalery .galery2 img{
-    object-fit: cover;
-    border-radius: 5px;
-    height: 300px;
-    max-width: 200px;
-}
-
-.clas5 .continergalery .galery2 .textbox{
-    border-style: solid;
-    border-radius: 5px;
-    font-family: "DM Sans", sans-serif;
-    font-style: italic;
-    font-size: small;
-    padding: 10px;
-}
-
-.clas6{
-    
-    padding: 40px 0;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: auto auto auto;
-    gap: 20px;
-    width: 100%;
-    background-image: url('./img/bg.png');
-    background-image: url('./img/bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: local;
-}
-
-
-
-.clas6 img{
-
-    object-fit: cover;
-    height: 20vh;
-    width: 20vh;
-    border-radius: 12px;
-}
-
-.clas7{
-    color: #623E2A;
-    width: 100%;
-    height: auto;
-    align-items: center;
-    background-image: url('./img/bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: local;
-    display: flex;
-    padding: 200px 0;
-    justify-content: space-evenly;
-    text-align: center;
-}
-
-.clas7 .left {
-    width: 40%;
-}
-
-.clas7 .left h3{
-    font-family: 'catyMarger', sans-serif;
-    font-weight: bold;
-    font-size: 35px;
-    letter-spacing: 3px;
-}
-
-.clas7 .left p{
-    font-family: "Poppins", sans-serif;
-}
-.clas7 .gift{
-    height: 180px;
-    background-color: #fff;
-    padding: 10px 20px;
-    border-radius: 6px;
-}
-
-.clas7 .gift img{
-    height: 50px;
-}
-
-
-.clas7 .gift button{
-    background-color: #622A2A;
-    color: #fff;
-    border: none;
-    padding: 7px 50px;
-    border-radius: 7px;
-
-}
-
-.clas8 {
-    width: 100%;
-    height: 900px;
-    background-image: url('./img/turut\ mengundang.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: local;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    isolation: isolate;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.clas8 h2{
-    font-family: "Montserrat", sans-serif;
-    font-size: 5vh;
-    letter-spacing: 5px;
-}
-
-.clas8 ul{
-    list-style-type: none;
-    position: relative;
-    left: -10px;
-}
-
-.clas8 ul li {
-    font-family: "Poppins", sans-serif;
-    font-weight: medium;
-    letter-spacing: 2px;
-    font-size: 16.5px;
-}
-.clas8::after{
-    content: ' ';
-    background-color: #622A2A;
-    position: absolute;
-    inset:  0;
-    opacity: .5;
-    z-index: -1;
-}
-
-.clas9 {
-    background-color: #622A2A;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 600px;
-    color: #fff;
-    padding-bottom: 70px;
-}
-
-.clas9 h1{
-    text-align: center;
-    font-family: 'catyMarger';
-    font-size: 10vh;
-    letter-spacing: 5px;
-}
-
-.clas9 .textbox {
-    font-family: '';
-    margin: 0 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    border-style: solid;
-    padding: 20px; 
-    border-radius: 9px;
-    color: #fff;  
-    font-family: "DM Sans", sans-serif;
-}
-
-.clas9 .textbox ul{
-    position: relative;
-    left: -40px;
-    list-style-type: none;
-}
-.clas9 .textbox ul li img{
-    height: 30px;
-    color: #fff;
-    filter: invert(100%);
-}
-.clas9 .textbox ul li span{
-    position: relative;
-    top: -11px;
-    left: 10px;
-}
-
-.clas9 .textbox ul li span a {
-    color: #fff;
-}
-
-.clas9 button{
-    height: 200px;
-    width: 30%;
-    border: none;
-    border-radius: 6px;
-    background-color: #fff;
-    transition: 1s;
-}
-
-.clas9 button:hover{
-    width: 15%;
-    background-color: #797979;
-    
-}
-
-.clas9 button:focus{
-    background-color: #252525;
-    color: #fff;
-}
-
-
-
-@media (max-width: 800px){
-    .clas2 div{
-        justify-content: center;
-        grid-template-areas: 
-        '. right .'
-        '. left .'
-        '. footer .';
-    }
-
-    .clas2 div #kakel{
-        right: 0;
-    }
-
-    .clas3{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .clas4{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .clas4 .condition{
-        margin-bottom: 40px;
-    }
-    .clas5 .continergalery{
-        
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .clas6{
-        grid-template-columns: 
-        auto auto;
-    }
-    .clas7{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .clas7 .left{
-        width: 80%;
-    }
-    .clas8{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .clas9{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-}
-    </style>
+    <link rel="stylesheet" href="stylees.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>INVITATION</title>
   </head>
   <body>
-  
-    <audio id="myAudio" src="./sound/main_song.mp3" muted="muted" type="audio/mpeg">
-    </audio>
+    <div class="onload" id="onload">
+      <span class="loader"></span>
+      <br />
+      <small>Menyiapkan semua data</small>
+      <small id="textload">harap menunggu.</small>
+    </div>
+    <button class="open" id="chardContiner">
+      <div class="chard" id="bukaUndangan">
+        <img src="./img/email.png" alt="" id="load" />
+        <span><p>BUKA UNDANGAN</p></span>
+      </div>
+    </button>
+    <audio
+      id="myAudio"
+      src="./sound/song_theme.mp3"
+      muted="muted"
+      type="audio/mpeg"
+    ></audio>
 
-    <button class="sound" >
-      <img src="./img/volumeon.png" alt="" id="sound">
+    <button class="sound">
+      <img src="./img/volumeon.png" alt="" id="sound" />
     </button>
     <div class="continer">
-      <div class="clas1">
+      <div class="clas1" id="header">
         <img class="topandDown" src="./img/top.png" alt="" />
         <div class="center" data-aos="fade-up" data-aos-duration="3000">
           <small>YOU ARE INVITED TO:</small><br /><br />
-          <strong>FRANCIS AWAsRD</strong><br />
+          <strong>FRANCIS AWARDs</strong><br />
           <strong>2024</strong>
         </div>
         <div class="bawah">
@@ -759,8 +53,8 @@ body .open{
               Merupakan kegiatan tahunan SMA Fransiskus Bandar Lampung yang
               diadakan dalam ujud pelepasan dan perpisahan kelas XII. Selain itu
               juga, Francis Award merupakan ajang apresiasi siswa-siswi kelas
-              XII yang berhasil meraih prestasi selama menempuh pendidikan di
-              SMA Fransiskus.
+              XII yang telah berhasil meraih prestasi selama menempuh pendidikan
+              di SMA Fransiskus.
             </p>
           </article>
           <img
@@ -771,9 +65,9 @@ body .open{
             data-aos-duration="3000"
           />
           <div class="footer">
-            <img src="./img/cowo.svg" alt="gambar 1" />
+            <img src="./img/cowo.png" alt="gambar 1" />
             <h2>FRANCIS AWARD 2024</h2>
-            <img src="./img/cewe.svg" alt="gambar 2" />
+            <img src="./img/cewe.png" alt="gambar 2" />
           </div>
         </div>
       </div>
@@ -782,7 +76,7 @@ body .open{
           <img src="./img/aula.jpg" alt="galery1" />
 
           <div class="area">
-            <img src="./img/top.svg" alt="" class="top" />
+            <img src="./img/top-left.png" alt="" class="top" />
             <h6>Tempat</h6>
             <b>AUDITORIUM</b><br />
             <small>SMA Fransiskus Bandar Lampung</small>
@@ -792,7 +86,7 @@ body .open{
           <img src="/img/aulasemua.jpg" alt="galery1" />
 
           <div class="area">
-            <img src="./img/top.svg" alt="" class="top" />
+            <img src="./img/top-left.png" alt="" class="top" />
             <h6>Hari & tanggal</h6>
             <b>Jumat</b><br />
             <small>26 April 2024</small>
@@ -802,7 +96,7 @@ body .open{
           <img src="./img/pak didik.jpg" alt="galery1" />
 
           <div class="area">
-            <img src="./img/top.svg" alt="" class="top" />
+            <img src="./img/top-left.png" alt="" class="top" />
             <h6>Pukul</h6>
             <b>14.30</b><br />
             <small>s.d. selesai</small>
@@ -819,10 +113,9 @@ body .open{
               menghadiri Francis Award.
             </li>
             <li>
-              Setiap perwakilan orang tua / wali murid wajib mengisi link
-              kehadiran minimal satu minggu sebelum kegiatan dilaksanakan
+              Setiap siswa diperkenankan untuk membawa hanya satu orang tua /
+              wali murid untuk menghadiri Francis Award
             </li>
-            <li>Hanya diperkenankan membawa satu orang tua / wali murid</li>
           </ul>
         </div>
 
@@ -832,17 +125,17 @@ body .open{
           data-aos-duration="1000"
         >
           <h4>DATA HADIR</h4>
-          <p>Nama Orang tua / Wali Murid</p>
+          <p>Nama Orang Tua / Wali Murid</p>
           <input type="text" placeholder="Nama Anda" class="isi" id="ortu" />
           <p>Nama Anak / Siswa</p>
           <input type="text" placeholder="Nama Siswa" class="isi" id="anak" />
           <p>Masukkan Kelas Anak Anda</p>
           <input type="text" placeholder="Kelas" class="isi" id="kelas" />
-          <sub>bila tidak tidak perlu dicentang</sub>
+          <p>Apakah anda dapat hadir?</p>
           <div>
             <input type="checkbox" name="" id="chek" />
-            <span>Apakah Anda Dapat Hadir?</span>
           </div>
+          <sub>Bila tidak, tidak perlu dicentang.</sub>
           <br />
           <button id="btn" class="btns">
             <p id="btnText">Submit</p>
@@ -861,7 +154,7 @@ body .open{
         </h3>
         <div class="continergalery">
           <div class="galery2" data-aos="fade-up" data-aos-duration="2000">
-            <img src="./img/Ampera.jpg" alt="galery2" />
+            <img src="./img/Ampera.png" alt="galery2" />
             <br />
             <div class="textbox">
               <p>
@@ -871,7 +164,7 @@ body .open{
             </div>
           </div>
           <div class="galery2" data-aos="fade-up" data-aos-duration="2000">
-            <img src="./img/Songket.svg" alt="galery2" />
+            <img src="./img/Songket.png" alt="galery2" />
             <br />
             <div class="textbox">
               <p>
@@ -892,8 +185,8 @@ body .open{
             </div>
           </div>
         </div>
-        <br>
-        <br>
+        <br />
+        <br />
       </div>
       <div class="clas6">
         <img
@@ -921,7 +214,7 @@ body .open{
           data-aos-duration="1000"
         />
         <img
-          src="./img/savero.svg"
+          src="./img/savero.png"
           alt="galery3"
           data-aos="fade-up"
           data-aos-duration="1000"
@@ -941,7 +234,7 @@ body .open{
           <p data-aos="fade-up" data-aos-duration="2000">
             Bagi Bapak/Ibu yang ingin mengirimkan hadiah untuk menunjang
             kegiatan Francis Award 2024, dapat melalui virtual account atau
-            e-Wallet di samping ini:
+            e-Wallet di samping ini.
           </p>
         </div>
         <br />
@@ -1023,22 +316,58 @@ body .open{
       btn.onclick = () => {};
     </script>
     <script>
-      let music = false;
+      let loaded = false;
+      let music = true;
       let myAudio = document.getElementById("myAudio");
-      let sound = document.getElementById("sound")
-
+      let sound = document.getElementById("sound");
+      let undangan = document.getElementById("chardContiner");
+      let header = document.getElementById("header");
+      let onLoad = document.getElementById("onload");
+      let textload = document.getElementById("textload");
       myAudio.volume = 0.2;
-      
-      function replace_space(text) {
-        text.replace(/\s+/g, " ");
-        let a = text.split(" ");
-        return a.join("+");
-      }
 
-      window.addEventListener("DOMContentLoaded", e =>{
+      window.addEventListener("load", (s) => {
+        console.log("client ready load: load");
+        onLoad.classList.add("onload--hidden");
+        loaded = true;
+      });
+
+      window.addEventListener("DOMContentLoaded", (e) => {
+        console.log("client ready load: DOM");
+        undangan.style = "pointer-events: visible;";
         myAudio.muted = false;
-        sound.src = './img/volumeof.png'
-      })
+        document.querySelector("html").style = "overflow-y: hidden;";
+
+        setTimeout(() => {
+          if (!loaded) {
+            console.log("unload");
+            let i = 7;
+            const intervals = setInterval(() => {
+              console.log(i);
+              textload.innerText = `periksa koneksi internet anda. dalam ${i} detik akan otimatis masuk ke website`;
+              i -= 1;
+              if (i <= 0) clearInterval(intervals);
+            }, 1000);
+      
+            setTimeout(() => {
+              if (!loaded) {
+                onLoad.classList.add("onload--hidden");
+                loaded = true;
+              }
+            }, 7000);
+          }
+        }, 20000);
+
+        $("#bukaUndangan").click(() => {
+          document.querySelector("html").style = "overflow-y: auto;";
+          undangan.style = "animation: mymove 5s;";
+          header.scrollIntoView();
+          myAudio.play();
+          undangan.addEventListener("animationend", () => {
+            undangan.style = "display: none;";
+          });
+        });
+      });
 
       function textbox_translate(textbox) {
         if (textbox == "on") return "dapat";
@@ -1097,22 +426,20 @@ body .open{
         navigator.clipboard.writeText(value);
       }
 
-      
-      
-      sound.addEventListener("click", ()=>{
-        
+      sound.addEventListener("click", () => {
         myAudio.muted = false;
-        console.log("a")
-        if(music){
-          sound.src = './img/volumeof.png'
-          myAudio.pause()
-        }else{
-          sound.src = './img/volumeon.png'
-          myAudio.play()
+        console.log("a");
+        if (music) {
+          sound.src = "./img/volumeof.png";
+          myAudio.pause();
+        } else {
+          sound.src = "./img/volumeon.png";
+          myAudio.play();
         }
-        console.log(music)
-        music = !music
-      })
+        console.log(music);
+        music = !music;
+      });
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </body>
 </html>
