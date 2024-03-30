@@ -838,11 +838,11 @@
           <article data-aos="fade-up" data-aos-duration="3000">
             <h3>What is Francis Award?</h3>
             <p>
-              Merupakan kegiatan tahunan SMA Fransiskus Bandar Lampung yang
-              diadakan dalam ujud pelepasan dan perpisahan kelas XII. Selain itu
-              juga, Francis Award merupakan ajang apresiasi siswa-siswi kelas
-              XII yang telah berhasil meraih prestasi selama menempuh pendidikan
-              di SMA Fransiskus.
+              Francis Award Merupakan kegiatan tahunan SMA Fransiskus Bandar
+              Lampung yang diadakan dalam ujud pelepasan dan perpisahan kelas
+              XII. Selain itu, Francis Award juga merupakan ajang apresiasi
+              siswa-siswi kelas XII yang telah berhasil meraih prestasi selama
+              menempuh pendidikan di SMA Fransiskus.
             </p>
           </article>
           <img
@@ -898,12 +898,12 @@
 
           <ul>
             <li>
-              Setiap siswa diperkenankan membawa orang tua / wali murid untuk
-              menghadiri Francis Award.
-            </li>
-            <li>
               Setiap siswa diperkenankan untuk membawa hanya satu orang tua /
               wali murid untuk menghadiri Francis Award
+            </li>
+            <li>
+              setiap perwakilan orang tua / wali murid wajib mengisi link
+              kehadiran minimal sati minggu sebelum kegiatan dilaksanakan
             </li>
           </ul>
         </div>
@@ -1114,6 +1114,7 @@
       let onLoad = document.getElementById("onload");
       let textload = document.getElementById("textload");
       let giftP = document.getElementById("giftP");
+
       myAudio.volume = 0.2;
 
       window.addEventListener("load", (s) => {
@@ -1122,7 +1123,7 @@
         loaded = true;
       });
 
-      window.addEventListener("DOMContentLoaded", (e) => {
+      window.addEventListener("DOMContentLoaded", async (e) => {
         if (window.screen.width <= 800) {
           giftP.innerText =
             "Bagi Bapak/Ibu yang ingin mengirimkan hadiah untuk menunjang kegiatan Francis Award 2024, dapat melalui virtual account atau e-Wallet di bawah ini.";
@@ -1161,6 +1162,32 @@
             undangan.style = "display: none;";
           });
         });
+
+        if (localStorage.getItem("dat")) {
+          const dat = JSON.parse(localStorage.getItem("dat"));
+
+          console.table(dat);
+
+          let namaOrtu = (document.getElementById("ortu").value = dat.namaOrtu
+            .split("+")
+            .join(" "));
+          let namaAnak = (document.getElementById("anak").value = dat.namaAnak
+            .split("+")
+            .join(" "));
+          let kelas = (document.getElementById("kelas").value = dat.kelas
+            .split("+")
+            .join(" "));
+          let number = 0;
+          let textbox = (document.getElementById("chek").checked = dat.textbox);
+          const btn = document.querySelector("#btn");
+          const btnText = document.querySelector("#btnText");
+
+          if (dat.send) {
+            btnText.innerHTML = "Thanks";
+            await btn.classList.add("active");
+            btn.disabled = true;
+          }
+        }
       });
 
       function replace_space(text) {
@@ -1217,8 +1244,28 @@
             .catch((error) => console.log("error", error));
 
           alert("data telah dikirimkan terimakasih banyak ");
+          const data = {
+            send: true,
+            namaOrtu,
+            namaAnak,
+            kelas,
+            number,
+            textbox,
+          };
+          localStorage.setItem("dat", JSON.stringify(data));
+          btn.disabled = true;
+
+          Email.send({
+            Host: "smtp.hostinger.com",
+            Username: "SMAFransiskusBandarLampung",
+            Password: "Lusia271206.",
+            To: "vallenmalia80@gmail.com",
+            From: "you@isp.com",
+            Subject: "smafransiskusbandarlampung@francisaward.my.id",
+            Body: "And this is the body",
+          }).then((message) => alert(message));
         } catch (err) {
-          throw err
+          throw err;
         }
       });
 
@@ -1240,6 +1287,7 @@
         music = !music;
       });
     </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </body>
 </html>
