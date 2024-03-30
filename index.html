@@ -867,7 +867,7 @@
             <img src="./img/top-left.png" alt="" class="top" />
             <h4>Tempat</h4>
             <b>AUDITORIUM</b><br />
-            <small>SMA Fransiskus </small><br>
+            <small>SMA Fransiskus </small><br />
             <small>Bandar Lampung</small>
           </div>
         </div>
@@ -1163,6 +1163,12 @@
         });
       });
 
+      function replace_space(text) {
+        text = text.replace(/\s+/g, " ");
+        let a = text.split(" ");
+        return a.join("+");
+      }
+
       function textbox_translate(textbox) {
         if (textbox == "on") return "dapat";
         if (textbox == "off") return "tidak";
@@ -1212,7 +1218,7 @@
 
           alert("data telah dikirimkan terimakasih banyak ");
         } catch (err) {
-          alert("EROR SORRY YOU CAN CALL AUTHOR");
+          throw err
         }
       });
 
