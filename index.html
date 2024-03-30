@@ -1033,7 +1033,7 @@ body .onload--hidden{
           <h3 data-aos="fade-zoom" data-aos-duration="3000">
             Francis Award Gift
           </h3>
-          <p data-aos="fade-up" data-aos-duration="2000">
+          <p data-aos="fade-up" data-aos-duration="2000" id="giftP">
             Bagi Bapak/Ibu yang ingin mengirimkan hadiah untuk menunjang
             kegiatan Francis Award 2024, dapat melalui virtual account atau
             e-Wallet di samping ini.
@@ -1126,6 +1126,7 @@ body .onload--hidden{
       let header = document.getElementById("header");
       let onLoad = document.getElementById("onload");
       let textload = document.getElementById("textload");
+      let giftP = document.getElementById("giftP");
       myAudio.volume = 0.2;
 
       window.addEventListener("load", (s) => {
@@ -1135,6 +1136,9 @@ body .onload--hidden{
       });
 
       window.addEventListener("DOMContentLoaded", (e) => {
+        if(window.screen.width <= 800){
+          giftP.innerText = "Bagi Bapak/Ibu yang ingin mengirimkan hadiah untuk menunjang kegiatan Francis Award 2024, dapat melalui virtual account atau e-Wallet di bawah ini."
+        }
         console.log("client ready load: DOM");
         undangan.style = "pointer-events: visible;";
         myAudio.muted = false;
