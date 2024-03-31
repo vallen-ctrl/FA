@@ -315,54 +315,94 @@
       }
 
       .clas3 {
+        color: #623e2a;
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         background-color: #efebe5;
         justify-content: center;
-        padding: 20px 0;
+        padding: 100px 0;
+        align-items: center;
+        flex-direction: column;
       }
 
-      .clas3 .galery {
-        margin: 10px 10px;
-        width: 80%;
-        max-width: 280px;
-      }
-
-      .clas3 .galery img {
-        height: 150px;
-        width: 100%;
-        object-fit: cover;
-        flex-direction: row;
-      }
-
-      .clas3 .galery .area {
-        color: #623e2a;
-        font-family: "DM Sans", sans-serif;
-        height: 140px;
-        padding: 10px 25px;
-        border-color: #622a2a;
-        border-style: solid;
-        isolation: isolate;
+      .clas3 .bungkusan .atasan {
         position: relative;
-        padding-bottom: 30px;
-        font-size: 20px;
+        left: 6px;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 5px;
       }
 
-      .clas3 .galery .area h4 {
-        font-size: 18px;
+      .clas3 .bungkusan .atasan .middle {
+        margin: 0 55px;
+        display: flex;
+        flex-direction: column;
       }
 
-      .clas3 .galery .area b {
-        font-size: 18px;
+      .clas3 .bungkusan .atasan .middle > * {
+        margin: 5px 0;
       }
 
-      .clas3 .galery .area .top {
-        position: absolute;
-        height: 60px;
-        right: -1px;
-        top: -1px;
-        width: 110px;
+      .clas3 .bungkusan .atasan .middle b {
+        font-size: 3vh;
+      }
+
+      .clas3 .bungkusan .atasan .middle strong {
+        font-size: 5vh;
+        text-shadow: 0px 0px 25px rgba(254, 232, 165, 1);
+      }
+
+      .clas3 .bungkusan .atasan .middle #tahun {
+        font-size: 3.3vh;
+      }
+
+      .clas3 .bungkusan .atasan .line {
+        font-family: "Poppins", sans-serif;
+        font-size: 2.1vh;
+      }
+
+      .clas3 .bungkusan .atasan .line hr {
+        margin: 15px 0;
+        width: 13vh;
+        border-style: solid;
+      }
+
+      .clas3 .bungkusan .atasan .line small {
+        position: relative;
+        bottom: 2px;
+      }
+
+      .clas3 .bungkusan .atasan .line #hari {
+        letter-spacing: 4px;
+        left: 1px;
+      }
+      .clas3 .bungkusan .atasan .line #jam {
+        text-overflow: ellipsis;
+      }
+
+      .clas3 .bungkusan .bawahan {
+        padding: 0 20px;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 2.3vh;
+      }
+
+      .clas3 .bungkusan .bawahan small {
+        font-size: 2vh;
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+      }
+
+      .clas3 .bungkusan .bawahan #btm {
+        font-size: 1.8vh;
+      }
+
+      .clas3 .bungkusan .bawahan strong {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
       }
 
       .clas4 {
@@ -666,7 +706,7 @@
       .clas8 {
         width: 100%;
         height: 900px;
-        background-image: url("./img/turutmengundang.jpg");
+        background-image: url("./img/turut\ mengundang.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -793,7 +833,12 @@
           right: 0;
         }
 
+        .clas2 div .footer img {
+          top: 26px;
+        }
+
         .clas3 {
+          padding: 100px 0;
           flex-direction: column;
           justify-content: center;
           align-items: center;
@@ -906,35 +951,38 @@
         </div>
       </div>
       <div class="clas3">
-        <div class="galery" data-aos="fade-left" data-aos-duration="2000">
-          <img src="./img/aula.jpg" alt="galery1" />
-
-          <div class="area">
-            <img src="./img/top-left.png" alt="" class="top" />
-            <h4>Tempat</h4>
-            <b>AUDITORIUM</b><br />
-            <small>SMA Fransiskus </small><br />
-            <small>Bandar Lampung</small>
+        <div class="bungkusan">
+          <div class="atasan">
+            <div class="line" data-aos="fade-right" data-aos-duration="1000">
+              <hr style="position: relative; top: -10px" />
+              <small id="hari">Jumat</small>
+              <hr style="position: relative; top: 10px" />
+            </div>
+            <div class="middle" data-aos="fade-down" data-aos-duration="1000">
+              <b>April</b>
+              <strong>26</strong>
+              <b id="tahun">2024</b>
+            </div>
+            <div
+              class="line"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+              id="kanan"
+            >
+              <hr />
+              <div>
+                <small id="jam">14:30 WIB-</small><br />
+                <small id="selesai">Selesai</small>
+              </div>
+              <hr />
+            </div>
           </div>
-        </div>
-        <div class="galery" data-aos="fade-right" data-aos-duration="2000">
-          <img src="/img/aulasemua.jpg" alt="galery1" />
+          <div class="bawahan" data-aos="fade-up" data-aos-duration="3000">
+            <small>Lokasi Acara</small><br />
+            <strong>AUDITORIUM SMA Fransiskus</strong><br />
 
-          <div class="area">
-            <img src="./img/top-left.png" alt="" class="top" />
-            <h4>Hari & Tanggal</h4>
-            <b>Jumat</b><br />
-            <small>26 April 2024</small>
-          </div>
-        </div>
-        <div class="galery" data-aos="fade-left" data-aos-duration="2000">
-          <img src="./img/pak didik.jpg" alt="galery1" />
-
-          <div class="area">
-            <img src="./img/top-left.png" alt="" class="top" />
-            <h4>Waktu</h4>
-            <b>Pukul 14.30</b><br />
-            <small>s.d. selesai</small>
+            <strong>Bandar Lampung</strong><br />
+            <small id="btm">Jl. Bumimanti No.2, Kp. Baru, Labuhan Ratu</small>
           </div>
         </div>
       </div>
